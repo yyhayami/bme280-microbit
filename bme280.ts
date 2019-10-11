@@ -155,7 +155,7 @@ namespace BME280 {
     function num2str(n: number): string {
         let n1 = Math.floor(n / 100)
         let n2 = Math.floor(n - (n1 * 100))
-        let s = `${n1}` + '.' + `${n2}`
+        let s = `${n1}` + '.' + ('00' + `${n2}`).slice(-2)
         return s
     }
 
